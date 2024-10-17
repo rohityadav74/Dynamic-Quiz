@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Quiz with Image Upload</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="teacher-section">
+    <h1>Set Quiz Questions</h1>
+    <form id="questionForm">
+      <h2>Question Type</h2>
+      <select id="questionType">
+        <option value="mcq">MCQ</option>
+        <option value="singleChoice">Single Choice</option>
+        <option value="fillBlank">Fill in the Blank</option>
+        <option value="subjective">Subjective</option>
+      </select>
+
+      <div id="questionContent">
+        <!-- Dynamic form fields will be generated here -->
+      </div>
+
+      <h3>Upload an Image (optional):</h3>
+      <input type="file" id="questionImage">
+
+      <button type="button" id="addQuestion">Add Question</button>
+    </form>
+
+    <button id="generateQuiz">Generate Quiz</button>
+  </div>
+
+  <div class="quiz-container" style="display: none;">
+    <h1>Student Quiz</h1>
+    <form id="quizForm">
+      <!-- Quiz questions will appear here -->
+    </form>
+    <button type="submit" id="submitQuiz">Submit Quiz</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
